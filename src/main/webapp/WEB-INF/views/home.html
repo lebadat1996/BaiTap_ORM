@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+</head>
+<body>
+<table style="border: 2px solid black">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>color</th>
+        <th>Category</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="p:${product}">
+        <td th:text="${p.getId()}"></td>
+        <td th:text="${p.getProductName()}"></td>
+        <td th:text="${p.getPrice()}"></td>
+        <td th:text="${p.getQuantity()}"></td>
+        <td th:text="${p.getColor()}"></td>
+        <td th:text="${p.getCategory()}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
